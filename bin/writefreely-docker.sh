@@ -72,13 +72,13 @@ pages_parent_dir     = /writefreely
 keys_parent_dir      =
 
 [database]
-type     = sqlite3
-filename = writefreely.db
-username =
-password =
-database =
-host     = localhost
-port     = 3306
+type     = ${WRITEFREELY_DATABASE_TYPE:-sqlite3}
+filename = ${WRITEFREELY_DATABASE_FILENAME:-writefreely.db}
+username = ${WRITEFREELY_DATABASE_USERNAME}
+password = ${WRITEFREELY_DATABASE_PASSWORD}
+database = ${WRITEFREELY_DATABASE_DATABASE}
+host     = ${WRITEFREELY_DATABASE_HOST:-localhost}
+port     = ${WRITEFREELY_DATABASE_PORT:-3306}
 
 [app]
 site_name         = ${WRITEFREELY_SITE_NAME}
