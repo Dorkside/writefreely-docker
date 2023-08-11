@@ -56,8 +56,8 @@ FROM alpine:3.17
 ARG WRITEFREELY_UID=5000
 
 RUN apk add --no-cache \
-        openssl=3.0.7-r2 \
-        ca-certificates=20220614-r3 \
+        openssl \
+        ca-certificates \
     && adduser -D -H -h /writefreely -u "${WRITEFREELY_UID}" writefreely \
     && install -o writefreely -g writefreely -d /data
 COPY --from=build --chown=writefreely:writefreely /stage /writefreely
