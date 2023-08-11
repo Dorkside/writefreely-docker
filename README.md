@@ -57,6 +57,9 @@ already exists, the environment variables will be blissfully ignored.
   the similarly named `config.ini` settings. See the [WriteFreely docs][wf:docs]
   for more information about them.
 - `WRITEFREELY_ADMIN_USER` and `WRITEFREELY_ADMIN_PASSWORD` will be used to automatically create an admin user, if they're specified. If either is missing, and admin user will not be created.
+- `WRITEFREELY_DATABASE_DATABASE`, `WRITEFREELY_DATABASE_HOST`,
+  `WRITEFREELY_DATABASE_PORT`, `WRITEFREELY_DATABASE_USER`, and
+  `WRITEFREELY_DATABASE_PASSWORD` are used to configure the database connection.
 
  [wf:docs]: https://writefreely.org/docs/latest/admin/config
 
