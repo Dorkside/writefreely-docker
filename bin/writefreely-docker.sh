@@ -79,6 +79,7 @@ password = ${WRITEFREELY_DATABASE_PASSWORD}
 database = ${WRITEFREELY_DATABASE_DATABASE}
 host     = ${WRITEFREELY_DATABASE_HOST:-localhost}
 port     = ${WRITEFREELY_DATABASE_PORT:-3306}
+tls      = ${WRITEFREELY_DATABASE_TLS:-true}
 
 [app]
 site_name         = ${WRITEFREELY_SITE_NAME}
