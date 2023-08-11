@@ -21,15 +21,15 @@ ARG WRITEFREELY_VERSION=v0.13.2
 ARG WRITEFREELY_FORK=writefreely/writefreely
 
 RUN apk add --no-cache --update \
-        nodejs=14.20.1-r0 \
-        npm=7.17.0-r0 \
-        make=4.3-r0 \
-        g++=10.3.1_git20210424-r2 \
-        git=2.32.4-r0 \
-        sqlite-dev=3.35.5-r0 \
+        nodejs \
+        npm \
+        make \
+        g++ \
+        git \
+        sqlite-dev \
     && npm install -g \
-       less@4.1.3 \
-       less-plugin-clean-css@1.5.1 \
+       less \
+       less-plugin-clean-css \
     && go get -u github.com/go-bindata/go-bindata/...
 
 RUN mkdir -p /go/src/github.com/${WRITEFREELY_FORK} && \
