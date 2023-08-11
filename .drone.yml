@@ -1,0 +1,18 @@
+kind: pipeline
+name: build-and-publish
+
+steps:
+  - name: publish
+    image: plugins/docker
+    settings:
+      repo: tourblion/writefreely
+      auto_tag: true
+      username:
+        from_secret: docker_username
+      password:
+        from_secret: docker_password
+    when:
+      ref:
+        include:
+          - refs/heads/master
+          - refs/tags/**
